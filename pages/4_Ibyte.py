@@ -60,7 +60,7 @@ st.table(ocorrencias_por_cidade)
 # Plot the top 10 states with the most complaints
 ocorrencias_por_estado = df_filtered['UF'].value_counts().reset_index().head(10)
 ocorrencias_por_estado.columns = ['UF', 'Quantidade']
-fig_top_estados = px.bar(ocorrencias_por_estado, x='ESTADO', y='Quantidade',
+fig_top_estados = px.bar(ocorrencias_por_estado, x='UF', y='Quantidade',
                           title='Top 10 Estados com Mais Reclamações',
                           labels={'Quantidade': 'Quantidade de Reclamações', 'UF': 'UF'},
                           text='Quantidade')
